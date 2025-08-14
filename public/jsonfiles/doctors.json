@@ -1,0 +1,328 @@
+[
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Anjali Sharma",
+      "ne": "डा. अन्जली शर्मा"
+    },
+    "specialty": {
+      "en": "Cardiologist",
+      "ne": "हृदय विशेषज्ञ"
+    },
+    "experience": {
+      "en": "12 ",
+      "ne": "१२ "
+    },
+    "services": {
+      "en": [
+        "Heart check-up",
+        "ECG",
+        "Echocardiography",
+        "Blood pressure management"
+      ],
+      "ne": ["हृदय जाँच", "इसीजी", "इकोकार्डियोग्राफी", "रक्तचाप व्यवस्थापन"]
+    },
+
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Ramesh Adhikari",
+      "ne": "डा. रमेश अधिकारी"
+    },
+    "specialty": {
+      "en": "Dermatologist",
+      "ne": "त्वचा विशेषज्ञ"
+    },
+    "experience": {
+      "en": "9",
+      "ne": "९"
+    },
+    "services": {
+      "en": [
+        "Skin allergy treatment",
+        "Acne treatment",
+        "Mole removal",
+        "Skin biopsy"
+      ],
+      "ne": [
+        "छालाको एलर्जी उपचार",
+        "मुहांसो उपचार",
+        "मोल हटाउने",
+        "छालाको बायोप्सी"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Priya Koirala",
+      "ne": "डा. प्रिया कोइराला"
+    },
+    "specialty": {
+      "en": "Pediatrician",
+      "ne": "बालरोग विशेषज्ञ"
+    },
+    "experience": {
+      "en": "15",
+      "ne": "१५ "
+    },
+    "services": {
+      "en": [
+        "Child health check-up",
+        "Vaccinations",
+        "Growth and development monitoring",
+        "Nutritional guidance for children"
+      ],
+      "ne": [
+        "बाल स्वास्थ्य जाँच",
+        "खोप",
+        "बृद्धि र विकास अनुगमन",
+        "बालबालिकाको पोषण सम्बन्धी मार्गदर्शन"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Sandeep Khadka",
+      "ne": "डा. सन्दीप खड्का"
+    },
+    "specialty": {
+      "en": "Orthopedic Surgeon",
+      "ne": "अर्थोपेडिक सर्जन"
+    },
+    "experience": {
+      "en": "18 ",
+      "ne": "१८ "
+    },
+    "services": {
+      "en": [
+        "Fracture treatment",
+        "Joint replacement",
+        "Sports injury management",
+        "Arthroscopy"
+      ],
+      "ne": [
+        "हड्डीको भाँचो उपचार",
+        "जोड प्रतिस्थापन",
+        "खेलकुद चोट व्यवस्थापन",
+        "आर्थ्रोस्कोपी"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Meera Basnet",
+      "ne": "डा. मीरा बस्नेत"
+    },
+    "specialty": {
+      "en": "Gynecologist",
+      "ne": "स्त्रीरोग विशेषज्ञ"
+    },
+    "experience": {
+      "en": "10 ",
+      "ne": "१० "
+    },
+    "services": {
+      "en": [
+        "Prenatal care",
+        "Gynecological surgery",
+        "Fertility consultation",
+        "Menstrual disorder treatment"
+      ],
+      "ne": [
+        "गर्भावस्था हेरचाह",
+        "स्त्रीरोग सर्जरी",
+        "प्रजनन सल्लाह",
+        "मासिक धर्म असामान्यता उपचार"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Rajendra Shrestha",
+      "ne": "डा. राजेन्द्र श्रेष्ठ"
+    },
+    "specialty": {
+      "en": "Neurologist",
+      "ne": "मस्तिष्क र स्नायु विशेषज्ञ"
+    },
+    "experience": {
+      "en": "14",
+      "ne": "१४ "
+    },
+    "services": {
+      "en": [
+        "Stroke management",
+        "Epilepsy treatment",
+        "Migraine treatment",
+        "Nerve conduction studies"
+      ],
+      "ne": [
+        "स्ट्रोक व्यवस्थापन",
+        "मिर्गौला रोग उपचार",
+        "माइग्रेन उपचार",
+        "नर्भ कन्डक्सन अध्ययन"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Sunita Gurung",
+      "ne": "डा. सुनीता गुरुङ"
+    },
+    "specialty": {
+      "en": "Psychiatrist",
+      "ne": "मनोवैज्ञानिक"
+    },
+    "experience": {
+      "en": "11",
+      "ne": "११ "
+    },
+    "services": {
+      "en": [
+        "Depression counseling",
+        "Anxiety disorder treatment",
+        "Psychotherapy",
+        "Medication management"
+      ],
+      "ne": [
+        "डिप्रेशन परामर्श",
+        "चिन्ता विकार उपचार",
+        "मनोचिकित्सा",
+        "औषधि व्यवस्थापन"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Bishal Thapa",
+      "ne": "डा. विशाल थापा"
+    },
+    "specialty": {
+      "en": "ENT Specialist",
+      "ne": "कान, नाक र घाँटी विशेषज्ञ"
+    },
+    "experience": {
+      "en": "8 ",
+      "ne": "८ "
+    },
+    "services": {
+      "en": [
+        "Hearing tests",
+        "Tonsillectomy",
+        "Sinus treatment",
+        "Ear infection management"
+      ],
+      "ne": [
+        "सुनाइ परीक्षण",
+        "टन्सिल हटाउने शल्यक्रिया",
+        "साइनस उपचार",
+        "कानको संक्रमण व्यवस्थापन"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Kabita Pokhrel",
+      "ne": "डा. कविता पोखरेल"
+    },
+    "specialty": {
+      "en": "General Physician",
+      "ne": "सामान्य चिकित्सक"
+    },
+    "experience": {
+      "en": "7 ",
+      "ne": "७ "
+    },
+    "services": {
+      "en": [
+        "General health check-up",
+        "Diabetes management",
+        "Hypertension treatment",
+        "Minor illness consultation"
+      ],
+      "ne": [
+        "सामान्य स्वास्थ्य जाँच",
+        "मधुमेह व्यवस्थापन",
+        "उच्च रक्तचाप उपचार",
+        "सानो रोग सल्लाह"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "name": {
+      "en": "Dr. Amit Bhandari",
+      "ne": "डा. अमित भण्डारी"
+    },
+    "specialty": {
+      "en": "Ophthalmologist",
+      "ne": "नेत्र विशेषज्ञ"
+    },
+    "experience": {
+      "en": "13 ",
+      "ne": "१३ "
+    },
+    "services": {
+      "en": [
+        "Eye check-up",
+        "Cataract surgery",
+        "Glaucoma treatment",
+        "Vision correction"
+      ],
+      "ne": [
+        "आँखा जाँच",
+        "मोतियाबिन्दु शल्यक्रिया",
+        "ग्लूकोमा उपचार",
+        "दृष्टि सुधार"
+      ]
+    },
+    "availableTime": {
+      "en": "Mon - Fri: 9 AM - 5 PM",
+      "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+    }
+  }
+]
