@@ -13,25 +13,91 @@ type Doctor = {
 };
 
 export default function AllDoctors({ doctors }: { doctors: Doctor[] }) {
-  const allDoctors = doctors || [];
+  const allServices = doctors || [];
 
-  const [bookNow, setBookNow] = useState<boolean>(false);
-  const [doctorsDetails, setDoctorsDetails] = useState({});
+  const [showDoctors, setShowDoctors] = useState<boolean>(false);
+  const [serviceType, setServiceType] = useState("");
 
   const router = useRouter();
   const { language } = useLanguageContext();
-
-  const haddleOnClick = (el) => {
-    setDoctorsDetails(el);
-    setBookNow(true);
-  };
 
   const handleGoBack = () => {
     router.back();
   };
 
+  const handleShowDoctors = (el) => {
+    setShowDoctors(true);
+    setServiceType(el);
+  };
+
   return (
-    <div className="text-black w-full h-full flex flex-col justify-center items-center p-4">
+    <div className="text-black w-full h-full flex flex-col justify-center items-center p-4 gap-6 ">
+      {!showDoctors && (
+        <>
+          <div className="flex justify-center items-center w-full flex-col">
+            <h1 className="text-4xl font-bold uppercase">
+              {language === "ENG" ? `Our Services` : "हाम्रा सेवा"}
+            </h1>
+
+            <button
+              onClick={handleGoBack}
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 cursor-pointer"
+            >
+              {language == "ENG" ? `Back` : `पछाडि`}
+            </button>
+          </div>
+
+          <div
+            className="flex flex-wrap gap-4 justify-center w-full max-h-[75vh]  shadow-2xl shadow-green-800 p-2 rounded-2xl
+    overflow-y-auto "
+          >
+            {allServices.CTVS_Diseases_and_Procedures.map((el, index) => {
+              return (
+                <DiseaseCard
+                  key={index}
+                  disease={el}
+                  handleShowDoctors={handleShowDoctors}
+                />
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {showDoctors && (
+        <DoctorsShow
+          allDoctors={allServices.Doctors}
+          setShowDoctors={setShowDoctors}
+          serviceType={serviceType}
+        />
+      )}
+    </div>
+  );
+}
+
+type bookDoctorsProps = {
+  doctorsDetails: "";
+  setBookNow: React.Dispatch<SetStateAction<boolean>>;
+};
+
+function DoctorsShow({ allDoctors, setShowDoctors, serviceType }) {
+  const { language } = useLanguageContext();
+  const [bookNow, setBookNow] = useState<boolean>(false);
+
+  const [details, setDetails] = useState({ serviceType });
+
+  const handleGoBack = () => {
+    setShowDoctors(false);
+  };
+
+  const haddleOnClick = (el) => {
+    setBookNow(true);
+
+    setDetails((prev) => ({ ...prev, doc: el }));
+  };
+
+  return (
+    <>
       {!bookNow && (
         <>
           <div className="flex justify-between w-full">
@@ -39,33 +105,22 @@ export default function AllDoctors({ doctors }: { doctors: Doctor[] }) {
               onClick={handleGoBack}
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 cursor-pointer"
             >
-              Back
+              {language == "ENG" ? `Back` : `पछाडि`}
             </button>
           </div>
 
-          <h1 className="text-4xl uppercase font-bold">
-            {language === "ENG" ? "Our Doctors" : "हाम्रा चिकित्सकहरू"}
-          </h1>
-          <div
-            className="
-        rounded-2xl
-     shadow-black
-     shadow-2xl
-    flex 
-    flex-wrap 
-    gap-8 
-    justify-center 
-    items-start 
-    p-4 
-    max-h-[80vh] 
-    overflow-y-auto 
-    scrollbar-thin 
-    scrollbar-thumb-green-400 
-    scrollbar-track-green-100
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-4xl uppercase font-bold">
+              {language === "ENG" ? "Our Doctors" : "हाम्रा चिकित्सकहरू"}
+            </h1>
 
-  "
-          >
-            {allDoctors.map((el, index) => (
+            <h1 className="text-2xl uppercase font-bold">
+              {" "}
+              {language === "ENG" ? serviceType.name.en : serviceType.name.ne}
+            </h1>
+          </div>
+          <div className=" flex gap-8 flex-wrap justify-center items-center">
+            {allDoctors.map((el, index: number) => (
               <div
                 key={index}
                 className="
@@ -89,31 +144,16 @@ export default function AllDoctors({ doctors }: { doctors: Doctor[] }) {
                 <h2 className="text-green-900 text-xl font-semibold mb-1">
                   {language === "ENG" ? el.name.en : el.name.ne}
                 </h2>
-                <p className="text-green-700 font-medium mb-2">
-                  {language === "ENG" ? el.specialty.en : el.specialty.ne}
-                </p>
+
                 <p className="text-green-600 mb-3">
                   {language === "ENG"
                     ? `${el.experience.en} years experience`
                     : `${el.experience.ne} वर्ष अनुभव`}
                 </p>
 
-                <div className="w-full mb-4">
-                  <h3 className="font-semibold text-green-800 mb-2">
-                    {language === "ENG" ? "Services:" : "सेवाहरू:"}
-                  </h3>
-                  <ul className="list-disc list-inside space-y-1 text-green-700 max-h-28 overflow-y-auto scrollbar-thin scrollbar-thumb-green-400 scrollbar-track-green-100">
-                    {(language === "ENG" ? el.services.en : el.services.ne).map(
-                      (service, i) => (
-                        <li key={i}>{service}</li>
-                      )
-                    )}
-                  </ul>
-                </div>
-
                 <button
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 cursor-pointer"
                   onClick={() => haddleOnClick(el)}
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 cursor-pointer"
                 >
                   {language === "ENG" ? "Book Now" : "बुक गर्नुहोस्"}
                 </button>
@@ -124,21 +164,15 @@ export default function AllDoctors({ doctors }: { doctors: Doctor[] }) {
       )}
 
       {bookNow && (
-        <BookDoctor doctorsDetails={doctorsDetails} setBookNow={setBookNow} />
+        <BookDoctor doctorsDetails={details} setBookNow={setBookNow} />
       )}
-    </div>
+    </>
   );
 }
-
-type bookDoctorsProps = {
-  doctorsDetails: "";
-  setBookNow: React.Dispatch<SetStateAction<boolean>>;
-};
 
 function BookDoctor({ doctorsDetails, setBookNow }: bookDoctorsProps) {
   const { language } = useLanguageContext();
 
-  console.log(doctorsDetails);
   const handleCancel = () => {
     setBookNow(false);
   };
@@ -151,13 +185,15 @@ function BookDoctor({ doctorsDetails, setBookNow }: bookDoctorsProps) {
             : "अपोइन्टमेन्ट बुक गर्नुहोस्"}
         </h1>
         <h1 className="text-2xl font-bold uppercase text-green-900 mb-4 text-center">
-          {language === "ENG" ? doctorsDetails.name.en : doctorsDetails.name.ne}
+          {language === "ENG"
+            ? doctorsDetails.doc.name.en
+            : doctorsDetails.doc.name.ne}
         </h1>
       </div>
 
       <div className="flex justify-center items-center">
         <Image
-          src={doctorsDetails.image}
+          src={doctorsDetails.doc.image}
           width={500}
           height={500}
           alt={language === "ENG" ? "doctor photo" : "डाक्टरको फोटो"}
@@ -259,6 +295,11 @@ function BookDoctor({ doctorsDetails, setBookNow }: bookDoctorsProps) {
           name="message"
           cols={30}
           rows={4}
+          value={
+            language === "ENG"
+              ? doctorsDetails.serviceType.name.en
+              : doctorsDetails.serviceType.name.ne
+          }
           placeholder={
             language === "ENG"
               ? "Briefly describe your symptoms or reason for appointment..."
@@ -295,5 +336,89 @@ function BookDoctor({ doctorsDetails, setBookNow }: bookDoctorsProps) {
         </button>
       </div>
     </form>
+  );
+}
+
+type diseaseCardProps = {
+  disease: "";
+  handleShowDoctors: () => void;
+};
+
+function DiseaseCard({ disease, handleShowDoctors }: diseaseCardProps) {
+  const { language } = useLanguageContext();
+
+  const isENG = language === "ENG";
+
+  return (
+    <div className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition duration-300 border-2 border-green-400 flex flex-col items-center hover:cursor-pointer">
+      {/* Disease Name */}
+      <h2 className="text-2xl font-bold text-green-700 mb-1">
+        {isENG ? disease.name.en : disease.name.ne}
+      </h2>
+      <h3 className="text-md text-gray-500 mb-4">
+        {isENG ? disease.name.en : disease.name.ne}
+      </h3>
+
+      <Image
+        src={
+          "https://dvl2h13awlxkt.cloudfront.net/assets/general-images/Knowledge/_800x800_crop_center-center_82_none/heart-anatomy.png?mtime=1675729924"
+        }
+        alt="heartimages"
+        width={500}
+        height={500}
+        className="border-4 border-amber-500 rounded-full w-80 h-80"
+      />
+
+      {/* Conditions */}
+      {disease.Conditions && (
+        <div className="mb-4">
+          <h4 className="font-semibold text-green-600 mb-2">
+            {isENG ? "Conditions:" : "अवस्थाहरू:"}
+          </h4>
+          <ul className="list-disc list-inside text-gray-600">
+            {disease.Conditions.map((c, idx) => (
+              <li key={idx}>{isENG ? c.en : c.ne}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Treatment Options */}
+      {disease.Treatment_Options && (
+        <div className="mb-4">
+          <h4 className="font-semibold text-green-600 mb-2">
+            {isENG ? "Treatment Options:" : "उपचार:"}
+          </h4>
+          <ul className="list-disc list-inside text-gray-600">
+            {disease.Treatment_Options.map((t, idx) => (
+              <li key={idx}>{isENG ? t.en : t.ne}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Procedures */}
+      {disease.Procedures && (
+        <div>
+          <h4 className="font-semibold text-green-600 mb-2">
+            {isENG ? "Procedures:" : "प्रक्रिया:"}
+          </h4>
+          <ul className="list-disc list-inside text-gray-600">
+            {disease.Procedures.map((p, idx) => (
+              <li key={idx}>{isENG ? p.en : p.ne}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div className=" w-full h-full flex justify-center items-end">
+        <button
+          onClick={() => handleShowDoctors(disease)}
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 cursor-pointer"
+        >
+          {isENG ? `Find Doctor` : `डाक्टर खोज्नुहोस्`}
+        </button>
+      </div>
+    </div>
   );
 }

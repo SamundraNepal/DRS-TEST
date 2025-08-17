@@ -1,0 +1,163 @@
+{
+  "CTVS_Diseases_and_Procedures": [
+    {
+      "name": { "en": "Varicose Veins", "ne": "वरिसोस भेन" },
+      "Conditions": [
+        {
+          "en": "Chronic Venous Insufficiency",
+          "ne": "क्रोनिक भेनस इन्सफिसियन्सी"
+        },
+        { "en": "Varicosities", "ne": "वरिकोसिटीज" }
+      ],
+      "Treatment_Options": [
+        {
+          "en": "Endovenous Laser Ablation (EVLA)",
+          "ne": "एन्डोभेनस लेजर अब्लेसन (EVLA)"
+        },
+        { "en": "Sclerotherapy", "ne": "स्क्लेरोथेरापी" },
+        {
+          "en": "Surgical Ligation and Stripping",
+          "ne": "सर्जिकल लाइगेशन र स्ट्रिपिङ"
+        }
+      ]
+    },
+    {
+      "name": { "en": "Deep Vein Thrombosis", "ne": "डीप भेन थ्रोम्बोसिस" },
+      "Conditions": [
+        { "en": "Acute DVT", "ne": "एक्युट डीभीटी" },
+        {
+          "en": "Post-thrombotic Syndrome",
+          "ne": "पोष्ट-थ्रोम्बोटिक सिन्ड्रोम"
+        }
+      ],
+      "Treatment_Options": [
+        { "en": "Anticoagulation", "ne": "एन्टिक्वागुलेसन" },
+        {
+          "en": "Catheter-directed Thrombolysis",
+          "ne": "क्याथेटर-डायरेक्टेड थ्रोम्बोलाइसिस"
+        },
+        {
+          "en": "IVC Filter Placement (selective cases)",
+          "ne": "आईभीसी फिल्टर प्लेसमेन्ट (चयनित केस)"
+        },
+        { "en": "Surgical Thrombectomy", "ne": "सर्जिकल थ्रोम्बेक्टोमी" }
+      ]
+    },
+    {
+      "name": { "en": "Vascular Malformations", "ne": "भास्कुलर मालफर्मेसन" },
+      "Types": [
+        {
+          "en": "Arteriovenous Malformations (AVM)",
+          "ne": "आर्टेरियोभेनस मालफर्मेसन (AVM)"
+        },
+        { "en": "Venous Malformations", "ne": "भेनस मालफर्मेसन" },
+        { "en": "Lymphatic Malformations", "ne": "लिम्फाटिक मालफर्मेसन" }
+      ],
+      "Treatment_Options": [
+        {
+          "en": "Endovascular Embolization",
+          "ne": "एन्डोभास्कुलर एम्बोलाइजेशन"
+        },
+        { "en": "Sclerotherapy", "ne": "स्क्लेरोथेरापी" },
+        { "en": "Surgical Resection", "ne": "सर्जिकल रेसेक्शन" }
+      ]
+    },
+    {
+      "name": { "en": "Hemodialysis Access", "ne": "हिमोडायलाइसिस एक्सेस" },
+      "Procedures": [
+        {
+          "en": "Arteriovenous (AV) Fistula Creation",
+          "ne": "आर्टेरियोभेनस (AV) फिस्टुला सिर्जना"
+        },
+        { "en": "AV Graft Placement", "ne": "AV ग्राफ्ट प्लेसमेन्ट" },
+        {
+          "en": "Central Venous Catheter Insertion",
+          "ne": "सेंट्रल भेनस क्याथेटर इन्सर्शन"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Peripheral Arterial Disease",
+        "ne": "पेरिफेरल आर्टेरियल डिजिज"
+      },
+      "Conditions": [
+        {
+          "en": "Atherosclerosis of Lower Limbs",
+          "ne": "तल्लो अंगको एथेरोस्क्लेरोसिस"
+        },
+        { "en": "Critical Limb Ischemia", "ne": "क्रिटिकल लिंब इस्केमिया" }
+      ],
+      "Treatment_Options": [
+        {
+          "en": "Endovascular Angioplasty and Stenting",
+          "ne": "एन्डोभास्कुलर एन्जियोप्लास्टी र स्टेन्टिङ"
+        },
+        { "en": "Peripheral Bypass Surgery", "ne": "पेरिफेरल बाइपास सर्जरी" },
+        { "en": "Endarterectomy", "ne": "एन्डआर्टेक्टोमी" },
+        {
+          "en": "Medical Management (antiplatelets, statins)",
+          "ne": "मेडिकल व्यवस्थापन (एन्टिप्लेटलेट्स, स्टेटिन्स)"
+        }
+      ]
+    },
+    {
+      "name": { "en": "Diabetic Foot", "ne": "डायबेटिक फुट" },
+      "Complications": [
+        { "en": "Ulcers", "ne": "घाउहरू" },
+        { "en": "Infections", "ne": "संक्रमणहरू" },
+        { "en": "Gangrene", "ne": "ग्याङ्ग्रीन" }
+      ],
+      "Treatment_Options": [
+        { "en": "Wound Debridement", "ne": "घाउ सफाई" },
+        {
+          "en": "Revascularization (angioplasty/bypass)",
+          "ne": "रिभास्कुलराइजेशन (एन्जियोप्लास्टी/बाइपास)"
+        },
+        { "en": "Skin Grafting", "ne": "छाला ग्राफ्टिङ" },
+        {
+          "en": "Minor or Major Amputation (if severe)",
+          "ne": "सानो वा ठूलो एंपुटेसन (गम्भीर भएमा)"
+        }
+      ]
+    }
+  ],
+  "Doctors": [
+    {
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+      "name": { "en": "Dr. Anjali Sharma", "ne": "डा. अन्जली शर्मा" },
+      "experience": { "en": "12", "ne": "१२" },
+      "availableTime": {
+        "en": "Mon - Fri: 9 AM - 5 PM",
+        "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+      }
+    },
+    {
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+      "name": { "en": "Dr. Anjali Sharma", "ne": "डा. अन्जली शर्मा" },
+      "experience": { "en": "12", "ne": "१२" },
+      "availableTime": {
+        "en": "Mon - Fri: 9 AM - 5 PM",
+        "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+      }
+    },
+    {
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+      "name": { "en": "Dr. Anjali Sharma", "ne": "डा. अन्जली शर्मा" },
+      "experience": { "en": "12", "ne": "१२" },
+      "availableTime": {
+        "en": "Mon - Fri: 9 AM - 5 PM",
+        "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+      }
+    },
+    {
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+      "name": { "en": "Dr. Anjali Sharma", "ne": "डा. अन्जली शर्मा" },
+      "experience": { "en": "12", "ne": "१२" },
+      "availableTime": {
+        "en": "Mon - Fri: 9 AM - 5 PM",
+        "ne": "सोमबार - शुक्रबार: बिहान ९ देखि साँझ ५ बजे सम्म"
+      }
+    }
+  ]
+}

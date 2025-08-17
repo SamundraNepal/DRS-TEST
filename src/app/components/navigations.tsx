@@ -10,14 +10,19 @@ export default function Navigation() {
     setLanguage(value);
   };
   return (
-    <div className=" font-bold  flex justify-around items-center p-4 bg-green-600 text-white font-bold">
+    <div className=" font-bold  flex justify-around items-center p-4 bg-black text-white">
       <Link href={"/"}>
         <div className="flex flex-col justify-center items-center">
-          <h1 className="font-bold">CVT</h1>
-          <p className="font-semibold">Cardio Vascular Thoracic</p>
+          <h1 className="font-bold uppercase text-3xl">CTVS Experts</h1>
         </div>
       </Link>
       <div className="flex gap-8">
+        <Link href={"/about-us"}>
+          <div className="hover:text-green-500 cursor-pointer">
+            {language === "ENG" ? "About Us" : "हाम्रो बारेमा"}
+          </div>
+        </Link>
+
         <Link href={"/log-in-sign-up"}>
           <div className="hover:text-green-500 cursor-pointer">
             Log In / Sign Up

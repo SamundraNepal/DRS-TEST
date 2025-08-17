@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const res = await fetch("http://localhost:3000/jsonfiles/doctors.json", {
+  const res = await fetch("http://localhost:3000/jsonfiles/services.json", {
     cache: "no-store", // always get fresh data
   });
 
