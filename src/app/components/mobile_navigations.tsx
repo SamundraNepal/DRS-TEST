@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLanguageContext } from './use-context';
 import { useState } from 'react';
 
-export default function Navigation() {
+export default function MobileNavigation() {
   const { language, setLanguage } = useLanguageContext();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,11 +33,11 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/*  <Link href={'/log-in-sign-up'}>
+          <Link href={'/log-in-sign-up'}>
             <div className="hover:text-green-400 transition-colors duration-200 cursor-pointer">
               Log In / Sign Up
             </div>
-          </Link>*/}
+          </Link>
 
           {/* Language Switcher */}
           <div className="flex gap-3 items-center">
@@ -87,11 +87,11 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* <Link href={'/log-in-sign-up'} onClick={() => setIsOpen(false)}>
+          <Link href={'/log-in-sign-up'} onClick={() => setIsOpen(false)}>
             <div className="hover:text-green-400 transition-colors duration-200 cursor-pointer">
               Log In / Sign Up
             </div>
-          </Link>*/}
+          </Link>
 
           {/* Language Switcher */}
           <div className="flex flex-col gap-2">

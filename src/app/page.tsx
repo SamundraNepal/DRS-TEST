@@ -1,31 +1,31 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { FaUserDoctor } from "react-icons/fa6";
-import { useLanguageContext } from "./components/use-context";
-import Image from "next/image";
+import Link from 'next/link';
+import { FaUserDoctor } from 'react-icons/fa6';
+import { useLanguageContext } from './components/use-context';
+import Image from 'next/image';
 
 export default function Home() {
   const { language } = useLanguageContext();
   return (
-    <div className="bg-white w-full h-[calc(100vh-90px)] text-black flex  justify-evenly items-center relative">
+    <div className="sm:h-[calc(100vh-70px)] h-[calc(100vh-135px)] w-full text-black flex sm:w-full justify-center items-center relative">
       <Image
-        className="w-full h-full object-cover brightness-50"
+        className="w-full absolute h-full object-cover brightness-50 -z-10"
         width={500}
         height={500}
-        alt={"images"}
+        alt={'images'}
         src={
-          "https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/15815402/shutterstock_280947350.0.0.1463614660.jpg?quality=90&strip=all&crop=0,0.02498750624688,100,99.950024987506"
+          'https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/15815402/shutterstock_280947350.0.0.1463614660.jpg?quality=90&strip=all&crop=0,0.02498750624688,100,99.950024987506'
         }
       />
 
-      <div className="absolute text-white w-full h-full flex justify-center items-center flex-col uppercase">
-        <h1 className="font-bold text-8xl">CTVS EXPERTS</h1>
-        <h2 className="font-bold text-2xl">Leaders in vascular &</h2>
-        <h2 className="font-bold text-2xl">Thoraacic Care</h2>
+      <div className="text-white w-full h-full flex justify-center items-center flex-col uppercase">
+        <h1 className="font-bold sm:text-8xl text-4xl">CTVS EXPERTS</h1>
+        <h2 className="font-bold sm:text-2xl">Leaders in vascular &</h2>
+        <h2 className="font-bold sm:text-2xl">Thoraacic Care</h2>
 
         <div className="flex p-2">
-          <Link href={"/doctors"}>
+          <Link href={'/doctors'}>
             <div
               className="
               border-4 border-green-600 
@@ -47,7 +47,7 @@ export default function Home() {
                 <FaUserDoctor className="text-9xl" />
               </div>
               <h1 className="font-extrabold text-lg">
-                {language === "ENG" ? "Our Services" : "हाम्रा सेवा"}
+                {language === 'ENG' ? 'Our Services' : 'हाम्रा सेवा'}
               </h1>
             </div>
           </Link>
@@ -55,134 +55,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
-
-// unused ones for now
-function bookDOc() {
-  <>
-    {
-      <form className="border-4 w-full max-w-xl p-8 flex flex-col gap-6 rounded-3xl shadow-black shadow-2xl font-bold bg-green-50">
-        <h1 className="text-3xl font-bold uppercase text-green-900 mb-4 text-center">
-          Book an Appointment with docName
-        </h1>
-
-        {/* Full Name */}
-        <div className="flex flex-col gap-1">
-          <label htmlFor="fullname" className="text-green-700">
-            Full Name
-          </label>
-          <input
-            id="fullname"
-            name="fullname"
-            className="border-2 border-green-400 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        {/* Email */}
-        <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="text-green-700">
-            Email Address
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            className="border-2 border-green-400 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        {/* Phone */}
-        <div className="flex flex-col gap-1">
-          <label htmlFor="phone" className="text-green-700">
-            Phone Number
-          </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            className="border-2 border-green-400 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        {/* Doctor Selection */}
-        <div className="flex flex-col gap-1">
-          <label htmlFor="doctor" className="text-green-700">
-            Select Doctor
-          </label>
-          <select
-            id="doctor"
-            name="doctor"
-            className="border-2 border-green-400 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          >
-            <option value="">-- Choose a Doctor --</option>
-            <option value="dr-smith">Dr. John Smith – Cardiology</option>
-            <option value="dr-jane">Dr. Jane Doe – Thoracic Surgery</option>
-            <option value="dr-lee">Dr. David Lee – Vascular Surgery</option>
-          </select>
-        </div>
-
-        {/* Date */}
-        <div className="flex flex-col gap-1">
-          <label htmlFor="date" className="text-green-700">
-            Appointment Date
-          </label>
-          <input
-            id="date"
-            name="date"
-            type="date"
-            className="border-2 border-green-400 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        {/* Time */}
-        <div className="flex flex-col gap-1">
-          <label htmlFor="time" className="text-green-700">
-            Appointment Time
-          </label>
-          <input
-            id="time"
-            name="time"
-            type="time"
-            className="border-2 border-green-400 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        {/* Message / Reason */}
-        <div className="flex flex-col gap-1">
-          <label htmlFor="message" className="text-green-700">
-            Reason for Visit
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            cols={30}
-            rows={4}
-            placeholder="Briefly describe your symptoms or reason for appointment..."
-            className="border-2 border-green-400 rounded-md p-2 resize-none focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        {/* Submit */}
-        <div className="flex justify-center">
-          <button
-            type="submit"
-            className="
-        bg-green-600 text-white font-semibold py-3 px-8 rounded-full 
-        hover:bg-green-700 transition-colors duration-300 
-        shadow-md hover:shadow-lg cursor-pointer
-      "
-          >
-            Book Now
-          </button>
-        </div>
-      </form>
-    }
-  </>;
 }
