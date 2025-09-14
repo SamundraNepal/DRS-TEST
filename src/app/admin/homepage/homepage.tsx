@@ -294,6 +294,7 @@ interface Doctor {
 function DoctorsForm({ setAddDoctors }: doctorsFormProps) {
   const router = useRouter();
   const [doctorForm, setDoctorForm] = useState<Doctor>({
+
     doctor_email: '',
     image: null,
     doctors_name: { ne: '', en: '' },
@@ -305,6 +306,7 @@ function DoctorsForm({ setAddDoctors }: doctorsFormProps) {
     const { name, type, files, value } = e.target;
 
     if (type == 'file') {
+      // @ts-expect-error this is needed
       setDoctorForm((prev) => ({ ...prev, [name]: files[0] }));
     } else {
       setDoctorForm((prev) => ({ ...prev, [name]: value }));
@@ -355,6 +357,7 @@ function DoctorsForm({ setAddDoctors }: doctorsFormProps) {
       doctor_email: doctorForm.doctor_email,
     };
 
+    // @ts-expect-error this is needed
     formData.append('imageFile', doctorForm.image);
     formData.append('json', JSON.stringify(jsonData));
 
@@ -525,6 +528,8 @@ function ServiceForm({ setAddService }: serviceFormProps) {
     const { name, type, value } = e.target;
 
     if (type === 'file') {
+      
+      // @ts-expect-error this is needed
       setServiceForm((prev) => ({ ...prev, [name]: e.target.files[0] }));
     } else {
       setServiceForm((prev) => ({ ...prev, [name]: value }));
@@ -607,6 +612,7 @@ function ServiceForm({ setAddService }: serviceFormProps) {
       disease_treatments: serviceForm.disease_treatments,
     };
 
+    // @ts-expect-error this is needed
     formData.append('imageFile', serviceForm?.image);
     formData.append('json', JSON.stringify(jsonData));
 

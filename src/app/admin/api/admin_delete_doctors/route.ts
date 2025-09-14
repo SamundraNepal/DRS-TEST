@@ -61,7 +61,12 @@ export const POST = async (req: NextRequest) => {
         });
       }
 
-      const imageName = deleteID?.disease_image.split('/').pop();
+      if (deleteID.disease_image) {
+  // Here TypeScript knows it's a string
+     var imageName = deleteID?.disease_image.split('/').pop();
+      }
+
+
 
       //delete image
       await s3.send(

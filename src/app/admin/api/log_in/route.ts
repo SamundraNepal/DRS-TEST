@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '../../../../../lib/prisma';
 const bcrypt = require('bcrypt');
+// @ts-expect-error this is needed
 import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 
@@ -59,7 +60,7 @@ export const POST = async (req: NextRequest) => {
     });
   }
 };
-export async function CreateCookies(token_name: string, auth_token: string) {
+ async function CreateCookies(token_name: string, auth_token: string) {
   const cookiesStore = await cookies();
   cookiesStore.set(`${token_name}`, auth_token, {
     httpOnly: true,
