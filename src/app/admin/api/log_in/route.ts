@@ -45,13 +45,27 @@ export const POST = async (req: NextRequest) => {
       { expiresIn: '1h' }
     );
 
-    const cookies = await CreateCookies('auth_code', token);
 
-    return NextResponse.json({
+
+    // await CreateCookies('auth_code', token);
+  
+    const res = NextResponse.json({
       success: true,
       status: 200,
       message: 'Success',
     });
+
+
+    // fix here 
+
+  res.cookies.set("auth_code", token, {
+      httpOnly: true,
+      path: "/",
+      secure: process.env.NODE_ENV === "production", // ⚠️ use false if still on http://
+      sameSite: "lax", // or "none" if frontend/backend are different origins
+      maxAge: 60 * 60,
+    });
+
   } catch (err: any) {
     return NextResponse.json({
       success: false,
