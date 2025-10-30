@@ -2,9 +2,6 @@
 
 A **full-stack web application** for managing doctor appointments, scheduling, and tracking. Designed to streamline interactions between patients and healthcare staff with a **responsive, user-friendly interface**.  
 
-![DRS Banner](https://via.placeholder.com/1200x300?text=Doctor+Reservation+System)
-
----
 
 ## 🚀 Features
 
